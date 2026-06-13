@@ -1,24 +1,33 @@
 # Sanityhuang1988pioneer
 
-Next.js + Appwrite table setup utility, structured after
-`goldshoot0720/fengbroaiappwrite`.
+Sanity Studio project rebuilt from the table structure in
+`goldshoot0720/fengbroaiappwrite`, with an additional `CronSanity` document type.
 
-## Tables
+## Document Types
 
-- `cronsanity`: cron job sanity/health table.
+- `article`
+- `bank`
+- `commonaccount`
+- `commondocument`
+- `cronsanity`
+- `food`
+- `image`
+- `landtophistory`
+- `music`
+- `podcast`
+- `routine`
+- `subscription`
+- `video`
 
-## Environment
+## Setup
 
-Copy `.env.example` to `.env.local` and fill in:
+Copy `.env.example` to `.env.local` and fill in your Sanity project values:
 
 ```env
-NEXT_PUBLIC_APPWRITE_ENDPOINT=https://cloud.appwrite.io/v1
-NEXT_PUBLIC_APPWRITE_PROJECT_ID=your_project_id
-NEXT_PUBLIC_APPWRITE_DATABASE_ID=your_database_id
-NEXT_PUBLIC_APPWRITE_API_KEY=your_api_key
+SANITY_STUDIO_PROJECT_ID=your_project_id
+SANITY_STUDIO_DATASET=production
+SANITY_STUDIO_HOST=sanityhuang1988pioneer
 ```
-
-## Usage
 
 Install dependencies:
 
@@ -26,20 +35,22 @@ Install dependencies:
 npm install
 ```
 
-Start the app:
+Run locally:
 
 ```bash
 npm run dev
 ```
 
-Create the CronSanity table:
+Build:
 
 ```bash
-curl "http://localhost:3000/api/create-table?table=cronsanity"
+npm run build
 ```
 
-Check database stats:
+Deploy to Sanity-managed Studio hosting:
 
 ```bash
-curl "http://localhost:3000/api/database-stats"
+npm run deploy
 ```
+
+The hosted Studio URL will be `https://<SANITY_STUDIO_HOST>.sanity.studio`.
