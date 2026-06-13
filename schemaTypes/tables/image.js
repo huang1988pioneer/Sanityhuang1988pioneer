@@ -1,7 +1,7 @@
 import {defineTableDocument, requiredRule} from '../helpers.js'
 
 export const image = defineTableDocument({
-  name: 'image',
+  name: 'imageRecord',
   title: 'Image',
   fields: [
     {name: 'name', title: 'Name', type: 'string', validation: requiredRule},

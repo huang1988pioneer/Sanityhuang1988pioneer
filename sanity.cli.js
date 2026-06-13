@@ -5,5 +5,8 @@ export default defineCliConfig({
     projectId: process.env.SANITY_STUDIO_PROJECT_ID || 'replace-with-project-id',
     dataset: process.env.SANITY_STUDIO_DATASET || 'production'
   },
-  studioHost: process.env.SANITY_STUDIO_HOST || 'sanityhuang1988pioneer'
+  studioHost: process.env.SANITY_STUDIO_HOST || 'sanityhuang1988pioneer',
+  deployment: {
+    appId: 'dlwwg1rhw4bxya5zk5t0jf1w'
+  }
 })

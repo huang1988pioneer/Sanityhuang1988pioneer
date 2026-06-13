@@ -11,7 +11,7 @@ Sanity Studio project rebuilt from the table structure in
 - `commondocument`
 - `cronsanity`
 - `food`
-- `image`
+- `imageRecord` (Image table; `image` is a reserved Sanity type name)
 - `landtophistory`
 - `music`
 - `podcast`
